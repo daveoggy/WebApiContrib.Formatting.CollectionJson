@@ -5,16 +5,12 @@ using System.Text;
 
 namespace WebApiContrib.CollectionJson
 {
-    public class Collection : Collection<object>
-    {
-    }
-
-    public class Collection<T>
+    public class Collection
     {
         public Collection()
         {
             Links = new List<Link>();
-            Items = new List<Item<T>>();
+            Items = new List<Item>();
             Queries = new List<Query>();
             Template = new Template();
         }
@@ -22,9 +18,18 @@ namespace WebApiContrib.CollectionJson
         public string Version { get; set; }
         public Uri Href { get; set; }
         public IList<Link> Links { get; private set; }
-        public IList<Item<T>> Items { get; private set; }
+        public IList<Item> Items { get; private set; }
         public IList<Query> Queries { get; private set; }
         public Template Template { get; private set; }
         public OData OData { get; set; }
+    }
+
+    public class Collection<T> : Collection
+    {
+        public Collection()
+        {
+            Items = new List<Item<T>>();
+        }
+        public new IList<Item<T>> Items { get; private set; }
     }
 }
