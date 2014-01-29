@@ -25,5 +25,6 @@ namespace WebApiContrib.CollectionJson
         public IList<Item<T>> Items { get; private set; }
         public IList<Query> Queries { get; private set; }
         public Template Template { get; private set; }
+        public OData OData { get; set; }
     }
 }

@@ -8,11 +8,11 @@ namespace WebApiContrib.CollectionJson
         public OData()
         {
             Data = new List<Data>();
-            CollectionOptions = new List<ODataOption>();
+            ODataOptions = new List<ODataOption>();
         }
 
         public Uri Href { get; set; }
         public IList<Data> Data { get; set; }
-        public IList<ODataOption> CollectionOptions { get; set; }
+        public IList<ODataOption> ODataOptions { get; set; }
     }
 }
