@@ -55,6 +55,8 @@
     <Compile Include="Item.cs" />
     <Compile Include="IWriteDocument.cs" />
     <Compile Include="Link.cs" />
+    <Compile Include="OData.cs" />
+    <Compile Include="ODataOption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Query.cs" />
     <Compile Include="ReadDocument.cs" />
